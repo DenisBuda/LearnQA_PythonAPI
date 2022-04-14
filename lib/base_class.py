@@ -1,4 +1,3 @@
-
 class BaseClass:
     agents = [
         ("Mozilla/5.0 (Linux; U; Android 4.0.2; en-us; Galaxy Nexus Build/ICL53F) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"),
@@ -13,3 +12,7 @@ class BaseClass:
     expected_values_2 = {'platform': 'Googlebot', 'browser': 'Unknown', 'device': 'Unknown'}
     expected_values_3 = {'platform': 'Web', 'browser': 'Chrome', 'device': 'No'}
     expected_values_4 = {'platform': 'Mobile', 'browser': 'No', 'device': 'iPhone'}
+
+
+
+
