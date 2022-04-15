@@ -59,3 +59,14 @@ class Assertions:
         diff = deepdiff.DeepDiff(expected_json, dict_from_response)
         assert diff == {}, f"Error! Invalid values received: {diff}"
 
+    @staticmethod
+    def assert_cookies_keyses_from_response(cookies:dict, user_name:str):
+        assert cookies == [], f"Error! We get some keys from cookie for not authorized user: {user_name}"
+
+    @staticmethod
+    def assert_not_token_from_heafers_response_for_unauthorized_user(headers:dict, user_name:str):
+        assert headers == None, f"Error! We got token for unauthorized user: {user_name}"
+
+
+
+
