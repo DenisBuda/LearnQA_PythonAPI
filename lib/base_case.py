@@ -64,6 +64,9 @@ class BaseCase:
          "firstName": random_char(9)+"\n"}
     ]
 
-
+    data2 = {
+    'email': 'vinkotov@example.com',
+    'password': '1234'
+    }
 
 

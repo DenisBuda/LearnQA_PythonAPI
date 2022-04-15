@@ -1,5 +1,6 @@
 from requests import Response
 import json
+import deepdiff
 
 class Assertions:
     @staticmethod
@@ -40,3 +41,21 @@ class Assertions:
                                       f"\nText from response: {response_text}" \
                                       f"\nData or params value: {data_or_params_value}"
         assert response_text == "The value of 'username' field is too long", f"{response_text}"
+
+    @staticmethod
+    def assert_get_only_username(my_status_code:int, response_text:str, data_or_params_value:dict, username_expected:str, username_received:str):
+        assert my_status_code == 200, f"Error! Status code is not equal to 400. Status code is: {my_status_code}" \
+                                      f"\nText from response: {response_text}" \
+                                      f"\nData or params value: {data_or_params_value}"
+        assert username_expected == username_received, f"Error! Expected: {username_expected} Received: {username_received}"
+
+
+    @staticmethod
+    def assert_compare_jsons_for_get_only_username_from_response(dict_from_response:json, username_expected:str):
+        expected_json = {
+            "username": username_expected
+        }
+
+        diff = deepdiff.DeepDiff(expected_json, dict_from_response)
+        assert diff == {}, f"Error! Invalid values received: {diff}"
+
