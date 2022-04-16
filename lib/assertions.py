@@ -23,7 +23,7 @@ class Assertions:
         assert response_text == "Invalid email format", f"{response_text}"
 
     @staticmethod
-    def assert_good_client_status_code(my_status_code:int, response_text:str, data_or_params_value:dict):
+    def assert_good_client_status_code(my_status_code:int, response_text:str, data_or_params_value:dict = None):
         assert my_status_code == 200, f"Error! Status code is not equal to 200. Status code is: {my_status_code}" \
                                       f"\nText from response: {response_text}" \
                                       f"\nData or params value: {data_or_params_value}"
@@ -67,6 +67,32 @@ class Assertions:
     def assert_not_token_from_heafers_response_for_unauthorized_user(headers:dict, user_name:str):
         assert headers == None, f"Error! We got token for unauthorized user: {user_name}"
 
+    @staticmethod
+    def assert_cant_change_unauthorized_user(response_text:str, user_id:str):
+        assert response_text == "Auth token not supplied", f"Error! User has been changed {user_id}"
 
+    @staticmethod
+    def assert_compare_username_and_email(expected_user_name:str,
+                                          expected_user_email:str,
+                                          received_user_name:str,
+                                          received_user_email:str
+                                          ):
+        assert expected_user_email == received_user_email, f"Invalid emails: Expected {expected_user_email}, Received: {received_user_email}"
+        assert expected_user_name == received_user_name, f"Invalid names: Expected {expected_user_name}, Received: {received_user_name}"
 
+    @staticmethod
+    def assert_compare_two_jsons(expected_json:dict, received_json:dict, after_edit:bool = False):
+        if after_edit == False:
+            diff = deepdiff.DeepDiff(expected_json, received_json)
+            assert diff == {}, f"Error! Invalid values received: {diff}"
+        else:
+            assert expected_json != {}, f"Error! Jsons are equals: {expected_json}, {received_json}"
 
+    @staticmethod
+    def assert_for_edit_user_using_incorrect_email(response_text:str):
+        etalon_response_text = "Invalid email format"
+        assert response_text == etalon_response_text, f"Error! Response text not equal to {etalon_response_text}"
+
+    @staticmethod
+    def asserf_for_compare_two_response_text(expected_response_text:str, received_response_text:str):
+        assert expected_response_text == received_response_text, f"Error! Texts are not equal{expected_response_text}&{received_response_text}"

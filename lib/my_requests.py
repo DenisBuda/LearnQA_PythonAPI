@@ -11,9 +11,9 @@ class MyRequests:
         elif method == "POST":
             response = requests.post(url=url, data=data, cookies=cookies, headers=headers)
         elif method == "PUT":
-            response = requests.post(url=url, data=data, cookies=cookies, headers=headers)
+            response = requests.put(url=url, data=data, cookies=cookies, headers=headers)
         elif method == "DELETE":
-            response = requests.post(url=url, data=data, cookies=cookies, headers=headers)
+            response = requests.delete(url=url, data=data, cookies=cookies, headers=headers)
         else:
             raise Exception(f"Bad HTTP method 'method' was received")
 

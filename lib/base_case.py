@@ -2,6 +2,7 @@ import json.decoder
 from requests import Response
 import random
 import string
+from lib.my_requests import MyRequests
 
 class BaseCase:
     def get_cookie(self, response: Response, cookie_name):
@@ -36,6 +37,16 @@ class BaseCase:
         }
         return my_data
 
+    @staticmethod
+    def create_random_user(data:dict):
+        response = MyRequests.send_request("POST","api/user/", data=data)
+        return response
+    @staticmethod
+    def get_user_info_by_id(user_id:str, cookies:str, headers:str):
+        response = MyRequests.send_request("GET", f"api/user/{user_id}", cookies=cookies, headers=headers)
+        return response
+
+
     my_data_new = [
         # Without username
         {"firstName": random_char(9),
@@ -68,5 +79,6 @@ class BaseCase:
     'email': 'vinkotov@example.com',
     'password': '1234'
     }
+
 
 
