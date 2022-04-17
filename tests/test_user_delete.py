@@ -1,9 +1,17 @@
+import allure
+
 from lib.my_requests import MyRequests
 import json
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 
 class TestUserDelete(BaseCase):
+
+    @allure.id("123") # Вывод айдишника конкретной задачи в Jira
+    @allure.title("This test has a simple title") # Вывод title для конкретного теста
+    @allure.feature('feature_2')
+    @allure.story('story_2')
+    @allure.severity(allure.severity_level.NORMAL) #Можно формировать по приоритету для регресса
     def test_delete_user_with_some_id(self):
         # Авторизуемся под пользователем
         my_new_data = BaseCase.data2
@@ -31,6 +39,11 @@ class TestUserDelete(BaseCase):
         Assertions.assert_delete_user_with_id_2(result.text)
         Assertions.assert_bad_client_status_code(result.status_code, result.text, my_id)
 
+    @allure.id("123") # Вывод айдишника конкретной задачи в Jira
+    @allure.title("This test has a simple title") # Вывод title для конкретного теста
+    @allure.feature('feature_2')
+    @allure.story('story_2')
+    @allure.severity(allure.severity_level.NORMAL) #Можно формировать по приоритету для регресса
     def test_delete_just_created_user(self):
         # Создаём пользователя
         datas = BaseCase.get_my_data(5, "@gmail.com")
@@ -76,6 +89,11 @@ class TestUserDelete(BaseCase):
                                            )
         Assertions.assert_not_found_delete_user(get_user_info_again.text)
 
+    @allure.id("123") # Вывод айдишника конкретной задачи в Jira
+    @allure.title("This test has a simple title") # Вывод title для конкретного теста
+    @allure.feature('feature_2')
+    @allure.story('story_2')
+    @allure.severity(allure.severity_level.NORMAL) #Можно формировать по приоритету для регресса
     def test_delete_user_with_another_user_authorization_token(self):
         # Создаём пользователя №1
         print("\n")
