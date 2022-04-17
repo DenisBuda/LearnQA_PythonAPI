@@ -96,3 +96,11 @@ class Assertions:
     @staticmethod
     def asserf_for_compare_two_response_text(expected_response_text:str, received_response_text:str):
         assert expected_response_text == received_response_text, f"Error! Texts are not equal{expected_response_text}&{received_response_text}"
+
+    @staticmethod
+    def assert_delete_user_with_id_2(response_text:str):
+        response_text == "Please, do not delete test users with ID 1, 2, 3, 4 or 5.", f"Error! We got another text from response {response_text}"
+
+    @staticmethod
+    def assert_not_found_delete_user(response_text:str):
+        response_text == "User not found", "Error! Text from response not equal to expected text"

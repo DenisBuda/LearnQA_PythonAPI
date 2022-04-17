@@ -79,6 +79,6 @@ class BaseCase:
     'email': 'vinkotov@example.com',
     'password': '1234'
     }
-
+    id = 2
 
 
