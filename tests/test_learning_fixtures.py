@@ -1,6 +1,11 @@
 
 
-def test_say_something():
-    assert 1 == 1
+def test_write_some_text(write_some_text_to_file):
+    print("Done")
+    print("SomeText")
+    print("SomeText")
+    print("SomeText")
+    print("SomeText")
+
 
 
