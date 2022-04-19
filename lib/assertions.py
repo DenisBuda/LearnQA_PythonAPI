@@ -104,3 +104,7 @@ class Assertions:
     @staticmethod
     def assert_not_found_delete_user(response_text:str):
         response_text == "User not found", "Error! Text from response not equal to expected text"
+
+
+
+

@@ -1,0 +1,636 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "slides": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "null"
+                },
+                "project": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "hubId": {
+                      "type": "string"
+                    },
+                    "ratingKinopoisk": {
+                      "type": "null"
+                    },
+                    "ratingIMDB": {
+                      "type": "null"
+                    },
+                    "genres": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "label": {
+                              "type": "string"
+                            },
+                            "alias": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "label",
+                            "alias"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "label": {
+                              "type": "string"
+                            },
+                            "alias": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "label",
+                            "alias"
+                          ]
+                        }
+                      ]
+                    },
+                    "releaseDate": {
+                      "type": "string"
+                    },
+                    "subscriptionType": {
+                      "type": "string"
+                    },
+                    "category": {
+                      "type": "string"
+                    },
+                    "canonicalUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "hubId",
+                    "ratingKinopoisk",
+                    "ratingIMDB",
+                    "genres",
+                    "releaseDate",
+                    "subscriptionType",
+                    "category",
+                    "canonicalUrl"
+                  ]
+                },
+                "badge": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "color": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "text",
+                    "color"
+                  ]
+                },
+                "minAge": {
+                  "type": "integer"
+                },
+                "campaignName": {
+                  "type": "null"
+                },
+                "adfox": {
+                  "type": "object",
+                  "properties": {
+                    "pixelClick": {
+                      "type": "null"
+                    },
+                    "pixelImpression": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "pixelClick",
+                    "pixelImpression"
+                  ]
+                },
+                "image": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title",
+                "description",
+                "link",
+                "project",
+                "badge",
+                "minAge",
+                "campaignName",
+                "adfox",
+                "image"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "null"
+                },
+                "project": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "hubId": {
+                      "type": "string"
+                    },
+                    "ratingKinopoisk": {
+                      "type": "null"
+                    },
+                    "ratingIMDB": {
+                      "type": "null"
+                    },
+                    "genres": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "label": {
+                              "type": "string"
+                            },
+                            "alias": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "label",
+                            "alias"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "label": {
+                              "type": "string"
+                            },
+                            "alias": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "label",
+                            "alias"
+                          ]
+                        }
+                      ]
+                    },
+                    "releaseDate": {
+                      "type": "string"
+                    },
+                    "subscriptionType": {
+                      "type": "string"
+                    },
+                    "category": {
+                      "type": "string"
+                    },
+                    "canonicalUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "hubId",
+                    "ratingKinopoisk",
+                    "ratingIMDB",
+                    "genres",
+                    "releaseDate",
+                    "subscriptionType",
+                    "category",
+                    "canonicalUrl"
+                  ]
+                },
+                "badge": {
+                  "type": "null"
+                },
+                "minAge": {
+                  "type": "integer"
+                },
+                "campaignName": {
+                  "type": "string"
+                },
+                "adfox": {
+                  "type": "object",
+                  "properties": {
+                    "pixelClick": {
+                      "type": "null"
+                    },
+                    "pixelImpression": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "pixelClick",
+                    "pixelImpression"
+                  ]
+                },
+                "image": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title",
+                "description",
+                "link",
+                "project",
+                "badge",
+                "minAge",
+                "campaignName",
+                "adfox",
+                "image"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "null"
+                },
+                "project": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "hubId": {
+                      "type": "string"
+                    },
+                    "ratingKinopoisk": {
+                      "type": "number"
+                    },
+                    "ratingIMDB": {
+                      "type": "number"
+                    },
+                    "genres": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "label": {
+                              "type": "string"
+                            },
+                            "alias": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "label",
+                            "alias"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "label": {
+                              "type": "string"
+                            },
+                            "alias": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "label",
+                            "alias"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "label": {
+                              "type": "string"
+                            },
+                            "alias": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "label",
+                            "alias"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "label": {
+                              "type": "string"
+                            },
+                            "alias": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "label",
+                            "alias"
+                          ]
+                        }
+                      ]
+                    },
+                    "releaseDate": {
+                      "type": "string"
+                    },
+                    "subscriptionType": {
+                      "type": "string"
+                    },
+                    "category": {
+                      "type": "string"
+                    },
+                    "canonicalUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "hubId",
+                    "ratingKinopoisk",
+                    "ratingIMDB",
+                    "genres",
+                    "releaseDate",
+                    "subscriptionType",
+                    "category",
+                    "canonicalUrl"
+                  ]
+                },
+                "badge": {
+                  "type": "null"
+                },
+                "minAge": {
+                  "type": "integer"
+                },
+                "campaignName": {
+                  "type": "null"
+                },
+                "adfox": {
+                  "type": "object",
+                  "properties": {
+                    "pixelClick": {
+                      "type": "null"
+                    },
+                    "pixelImpression": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "pixelClick",
+                    "pixelImpression"
+                  ]
+                },
+                "image": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title",
+                "description",
+                "link",
+                "project",
+                "badge",
+                "minAge",
+                "campaignName",
+                "adfox",
+                "image"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "null"
+                },
+                "project": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "hubId": {
+                      "type": "string"
+                    },
+                    "ratingKinopoisk": {
+                      "type": "null"
+                    },
+                    "ratingIMDB": {
+                      "type": "null"
+                    },
+                    "genres": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "label": {
+                              "type": "string"
+                            },
+                            "alias": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "label",
+                            "alias"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "label": {
+                              "type": "string"
+                            },
+                            "alias": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "label",
+                            "alias"
+                          ]
+                        }
+                      ]
+                    },
+                    "releaseDate": {
+                      "type": "string"
+                    },
+                    "subscriptionType": {
+                      "type": "string"
+                    },
+                    "category": {
+                      "type": "string"
+                    },
+                    "canonicalUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "hubId",
+                    "ratingKinopoisk",
+                    "ratingIMDB",
+                    "genres",
+                    "releaseDate",
+                    "subscriptionType",
+                    "category",
+                    "canonicalUrl"
+                  ]
+                },
+                "badge": {
+                  "type": "null"
+                },
+                "minAge": {
+                  "type": "integer"
+                },
+                "campaignName": {
+                  "type": "null"
+                },
+                "adfox": {
+                  "type": "object",
+                  "properties": {
+                    "pixelClick": {
+                      "type": "null"
+                    },
+                    "pixelImpression": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "pixelClick",
+                    "pixelImpression"
+                  ]
+                },
+                "image": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "id",
+                "title",
+                "description",
+                "link",
+                "project",
+                "badge",
+                "minAge",
+                "campaignName",
+                "adfox",
+                "image"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "isActive",
+        "slides"
+      ]
+    }
+  },
+  "required": [
+    "data"
+  ]
+}
